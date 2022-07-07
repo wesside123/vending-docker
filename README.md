@@ -14,7 +14,7 @@ Docker is required - https://www.docker.com/
 
 ``` docker compose up -d```
 
-3. In your browser, navigate to http://localhost:5000/ to access phpMyAdmin.
+3. In your browser, navigate to http://localhost:5222/ to access phpMyAdmin.
 
 4. Click "Databases" from the top navigation.
 
