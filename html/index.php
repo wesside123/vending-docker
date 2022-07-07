@@ -9,9 +9,9 @@ require "inc/bootstrap.php";
 
 //Separate the URI into an array
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-//echo $uri;
+
 $uri = explode( '/', $uri );
-//print_r($uri);
+
 //Test for '/inventory' endpoint
 if ((isset($uri[1]) && $uri[1] != 'inventory' && $uri[1] != '')) {
     header("HTTP/1.1 404 Not Found");

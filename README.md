@@ -8,14 +8,14 @@ This is a LAMP installation. An Apache webserver that has PHP 7.1.32 and a MySQL
 
 ## Installation
 
-Place the files on your webserver and edit the ```configVending.php``` to match your MySQL credentials.
+1. Clone the repo.
+2. From the command line, navigate to the repo you just cloned.
+3. Run the following command to start the service.
+``` docker compose up -d```
+4. In your browser, navigate to http://localhost:5000/ to access phpMyAdmin
+5. Create the database by clicking Databases.
+![My Image](images/databases.png)
 
-```bash
-define("DB_HOST", "DB_HOST_HERE");
-define("DB_USERNAME", "USERNAME_HERE");
-define("DB_PASSWORD", "PASSWORD_HERE");
-define("DB_DATABASE_NAME", "DB_NAME_HERE");
-```
 ## Usage
 
 With your favorite API client the following HTTP requests can be made:
@@ -24,7 +24,7 @@ With your favorite API client the following HTTP requests can be made:
 
 #### Coin accepted:
 
-```PUT http://simple-rest-api-php:8888```
+```PUT http://localhost:8080```
 
 Request Body:
 
@@ -44,7 +44,7 @@ Response Header:
 
 #### Coins returned:
 
-```DELETE http://simple-rest-api-php:8888/```
+```DELETE http://localhost:8080/```
 
 Response Code:
 
@@ -56,7 +56,7 @@ Response Header:
 
 #### Get an array of integers of remaining item quantities:
 
-```GET http://simple-rest-api-php:8888/inventory```
+```GET http://localhost:8080/inventory```
 
 Response Code:
 
@@ -68,7 +68,7 @@ Response Body:
 
 #### Get remaining item quantity (an integer) where ```id=#``` is a zero-based indexed list of three options:
 
-```GET http://simple-rest-api-php:8888/inventory/?id=#```
+```GET http://localhost:8080/inventory/?id=#```
 
 Response Code:
 
@@ -80,7 +80,7 @@ Response Body:
 
 #### Vend an item:
 
-```PUT http://simple-rest-api-php:8888/inventory/?id=#```
+```PUT http://localhost:8080/inventory/?id=#```
 
 Response Code:
 
@@ -100,7 +100,7 @@ Response Body:
 
 #### Attempt to vend an item out of stock:
 
-```PUT http://simple-rest-api-php:8888/inventory/?id=#```
+```PUT http://localhost:8080/inventory/?id=#```
 
 Response Code:
 
@@ -112,7 +112,7 @@ Response Headers:
 
 #### Attempt to vend with insufficient coins:
 
-```PUT http://simple-rest-api-php:8888/inventory/?id=#```
+```PUT http://localhost:8080/inventory/?id=#```
 
 Response Code:
 
