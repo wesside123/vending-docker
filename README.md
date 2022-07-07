@@ -4,17 +4,19 @@ A simple REST service which will support a beverage vending machine that is test
 
 ## Requirements
 
-This is a LAMP installation. An Apache webserver that has PHP 7.1.32 and a MySQL 5.7.26 database is required. 
+Docker is required - https://www.docker.com/ 
 
 ## Installation
 
 1. Clone the repo.
-2. From the command line, navigate to the repo you just cloned.
-3. Run the following command to start the service.
+2. From the command line, navigate to the repo you just cloned and run the following command to start the service.
+
 ``` docker compose up -d```
-4. In your browser, navigate to http://localhost:5000/ to access phpMyAdmin
-5. Create the database by clicking Databases.
-![My Image](images/databases.png)
+3. In your browser, navigate to http://localhost:5000/ to access phpMyAdmin.
+4. Click "Databases" from the top navigation.
+5. In the "Database name" field enter "vending", select "utf8mb4_unicode_ci" from the dropdown then click "Create". 
+6. Click "Import" from the top navigation.
+7. Click "Choose File" and selec the vending.sql file from the cloned repo.
 
 ## Usage
 
