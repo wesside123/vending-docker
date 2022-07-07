@@ -9,13 +9,19 @@ Docker is required - https://www.docker.com/
 ## Installation
 
 1. Clone the repo.
+
 2. From the command line, navigate to the repo you just cloned and run the following command to start the service.
 
 ``` docker compose up -d```
+
 3. In your browser, navigate to http://localhost:5000/ to access phpMyAdmin.
+
 4. Click "Databases" from the top navigation.
+
 5. In the "Database name" field enter "vending", select "utf8mb4_unicode_ci" from the dropdown then click "Create". 
+
 6. Click "Import" from the top navigation.
+
 7. Click "Choose File" and selec the vending.sql file from the cloned repo.
 
 ## Usage
