@@ -22,7 +22,7 @@ Docker is required - https://www.docker.com/
 
 6. Click "Import" from the top navigation.
 
-7. Click "Choose File" and select the vending.sql file from the cloned repo.
+7. Click "Choose File", select the "vending.sql" file from the root of the project and click "Go".
 
 ## Usage
 
